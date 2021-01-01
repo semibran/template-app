@@ -10,6 +10,11 @@ all: clean
 	html-minifier --collapse-whitespace src/index.html -o dist/index.html
 	rm dist/*.map
 
+watch: clean js css html
+	chokidar "src/**/*.js" -c "make js" \
+	& chokidar "src/*.css" -c "make css" \
+	& chokidar "src/*.html" -c "make html" \
+
 clean:
 	rm -rf dist
 	mkdir -p dist/tmp
@@ -22,8 +27,3 @@ css:
 
 js:
 	esbuild src/index.js --bundle --sourcemap --outfile=dist/index.js
-
-watch: clean js css html
-	chokidar "src/**/*.js" -c "make js" \
-	& chokidar "src/*.css" -c "make css" \
-	& chokidar "src/*.html" -c "make html" \
