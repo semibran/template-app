@@ -2,7 +2,7 @@
 > {{project.description}}
 
 ## development
-To get started, fork/clone this repo and enter the following commands.
+To get started, clone this repo and enter the following commands.
 ```sh
 > scaffy     # replace template tags
 > pkg-bump   # update package.json dep versions

@@ -1,12 +1,6 @@
 {
   "name": "{{project.id}}",
-  "version": "0.0.0",
-  "description": "{{project.description}}",
-  "repository": "{{author.username}}/{{project.id}}",
-  "author": "{{author.username}}",
-  "license": "MIT",
-  "main": "src/index.js",
-  "keywords": [],
+  "private": "true",
   "devDependencies": {
     "autoprefixer": "*",
     "chokidar-cli": "*",
